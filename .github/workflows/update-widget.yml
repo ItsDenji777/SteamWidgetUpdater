@@ -1,0 +1,31 @@
+name: Update Steam Widget
+
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: "0 0 */2 * *"
+
+jobs:
+  update:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Run Widget Updater
+        run: node steam-widget.js
+        env:
+          STEAM_API_KEY: ${{ secrets.STEAM_API_KEY }}
+          STEAM_ID: ${{ secrets.STEAM_ID }}
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+          APPLICATION_ID: ${{ secrets.APPLICATION_ID }}
+          DISCORD_USER_ID: ${{ secrets.DISCORD_USER_ID }}
