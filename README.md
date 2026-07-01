@@ -12,7 +12,7 @@ This repository includes a pre-configured widget layout file:
 
 ```
 
-steam-widget.json
+widget-layout.json
 
 ```
 
