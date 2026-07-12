@@ -1,4 +1,9 @@
+<center>
+
 # Steam Widget Updater
+#### I'd appreciate it if you could give my project a star :) ⭐
+
+</center>
 
 A GitHub Actions-based Steam stats fetcher that automatically updates a Discord application profile widget.
 
